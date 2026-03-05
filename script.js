@@ -26,7 +26,7 @@ async function sendSurprise() {
         });
 
         if (foundBadWord) {
-            alert("System Notice: Your message contains language that is not allowed. Please keep it respectful!");
+            alert("Your message contains language that is not allowed. Please keep it respectful!");
             return;
         }
 
@@ -50,7 +50,7 @@ async function sendSurprise() {
 
     emailjs.send("service_icloud", "template_bsp34oe", templateParams)
         .then(function() {
-            alert("Success! Your message has been sent via birthday.willkitch.me");
+            alert("Success! Your message has been sent via birthday.willkitch.me, the email will come from birthday@willkitch.me)");
             document.querySelectorAll('input, textarea').forEach(el => el.value = '');
         }, function(error) {
             alert("Failed to send message.");
